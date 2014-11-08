@@ -109,8 +109,6 @@ class FakeWeatherCenter: WeatherCenter {
     
     
     let locationMonitor = LocationMonitor()
-    let areaList = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("areaid_list", ofType: "plist")!)
-    
     
     func requestWeatherReport(#areaName: String, completionHandle: (Bool, [WeatherReport]?) -> ()) {
         

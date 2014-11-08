@@ -21,7 +21,6 @@
 		37316EEF19B1B04400175F89 /* WeatherCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316EEE19B1B04400175F89 /* WeatherCenter.swift */; };
 		37316EF119B1B5C500175F89 /* SWAWeatherCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316EF019B1B5C500175F89 /* SWAWeatherCenter.swift */; };
 		37316EF419B1E37200175F89 /* CryptoUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316EF319B1E37200175F89 /* CryptoUtilities.swift */; };
-		37316F1119B1FD0700175F89 /* areaid_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37316F1019B1FD0700175F89 /* areaid_list.plist */; };
 		374DA2D519FE553200DCBF52 /* CitiesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DA2D419FE553200DCBF52 /* CitiesManager.swift */; };
 		374DA2D819FE744900DCBF52 /* SWACitiesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DA2D719FE744900DCBF52 /* SWACitiesManager.swift */; };
 		374DA2DA19FE747600DCBF52 /* SWACitiesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374DA2D919FE747600DCBF52 /* SWACitiesManagerTests.swift */; };
@@ -114,7 +113,6 @@
 		37316EF019B1B5C500175F89 /* SWAWeatherCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAWeatherCenter.swift; sourceTree = "<group>"; };
 		37316EF319B1E37200175F89 /* CryptoUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoUtilities.swift; sourceTree = "<group>"; };
 		37316EF519B1EC7D00175F89 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
-		37316F1019B1FD0700175F89 /* areaid_list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = areaid_list.plist; sourceTree = SOURCE_ROOT; };
 		374DA2D419FE553200DCBF52 /* CitiesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesManager.swift; sourceTree = "<group>"; };
 		374DA2D719FE744900DCBF52 /* SWACitiesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWACitiesManager.swift; sourceTree = "<group>"; };
 		374DA2D919FE747600DCBF52 /* SWACitiesManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SWACitiesManagerTests.swift; path = TheWeatherTests/SWACitiesManagerTests.swift; sourceTree = SOURCE_ROOT; };
@@ -191,7 +189,6 @@
 				376B15F719F15EBC00444E09 /* ForecastCell.swift */,
 				3721529D19F120440007ED61 /* ForecastViewController.swift */,
 				37D257C319BC642D00175F56 /* LocationMonitor.swift */,
-				37316F1019B1FD0700175F89 /* areaid_list.plist */,
 				37316EEE19B1B04400175F89 /* WeatherCenter.swift */,
 				37316EF019B1B5C500175F89 /* SWAWeatherCenter.swift */,
 				374DA2D719FE744900DCBF52 /* SWACitiesManager.swift */,
@@ -367,7 +364,6 @@
 			files = (
 				3714DE8B1986253700F67031 /* Main.storyboard in Resources */,
 				3714DE8D1986253700F67031 /* Images.xcassets in Resources */,
-				37316F1119B1FD0700175F89 /* areaid_list.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
