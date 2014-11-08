@@ -9,9 +9,12 @@
 import XCTest
 
 class SWACitiesManagerTests: XCTestCase {
+    
+    let citiesManager = SWACitiesManager()
 
     override func setUp() {
         super.setUp()
+        NSUserDefaults.resetStandardUserDefaults()
     }
     
     override func tearDown() {
@@ -19,21 +22,35 @@ class SWACitiesManagerTests: XCTestCase {
     }
     
 
-    func testCurrentCity() {
-        SWACitiesManager.manager().currentCity = "北京"
-        XCTAssertEqual(SWACitiesManager.manager().currentCity!, "北京", "")
+    func testCitiesAddAndRemove() {
+        citiesManager.addCity("北京")
+        XCTAssertEqual(citiesManager.cities, ["北京"])
+        XCTAssertEqual(citiesManager.currentCity!, "北京", "")
         
-        let manager = SWACitiesManager()
-        XCTAssertEqual(manager.currentCity!, "北京", "manager should keep the currentCity when reallocated")
+        
+        citiesManager.removeCity("北京")
+        XCTAssertNil(citiesManager.currentCity, "")
+        
     }
     
-    func testCities() {
-        SWACitiesManager.manager().cities = ["北京", "上海"]
-        XCTAssertEqual(SWACitiesManager.manager().cities!, ["北京", "上海"], "")
+    func testDuplicateCities() {
+        citiesManager.addCity("北京")
+        citiesManager.addCity("北京")
+        XCTAssertEqual(citiesManager.cities, ["北京"])
+    }
+    
+    func testCurrentCityAndCitiesListCanBeRemembered() {
+        
+        citiesManager.addCity("北京")
+        citiesManager.addCity("上海")
+        citiesManager.selectCurrentCity("上海")
         
         let manager = SWACitiesManager()
-        XCTAssertEqual(manager.cities!, ["北京", "上海"], "manager should keep the cities when reallocated")
+        XCTAssertEqual(manager.currentCity!, "上海", "manager should keep the currentCity when reallocated")
+        XCTAssertEqual(manager.cities, ["北京", "上海"])
     }
+    
+
     
     func testCityIdentifier() {
         let identifierOfBeijing = SWACitiesManager.manager().identifierOfCity("北京")!
